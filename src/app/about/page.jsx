@@ -74,12 +74,22 @@ const AboutPage = () => {
             <motion.h1 initial={{x:"-300px"}} animate={isSkillRefInView ? {x:0} : {}} transition={{delay:0.2}} className="font-bold text-2xl">SKILLS</motion.h1>
             {/* SKILLS LISTS */}
             <motion.div initial={{x:"-300px"}} animate={isSkillRefInView ? {x:0} : {}} transition={{delay:0.2}} className="flex flex-wrap gap-4">
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">Node.js</div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">Next.js</div>
               <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">JavaScript</div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">JavaScript</div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">JavaScript</div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">JavaScript</div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">JavaScript</div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">JavaScript</div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">React</div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">Tailwind</div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">MongoDB</div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">PostgreSQL</div>
+
+              <div className="rounded p-2 text-sm cursor-pointer bg-slate-800 text-white hover:bg-white hover:text-black">Vue.js</div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-slate-800 text-white hover:bg-white hover:text-black">C#</div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-slate-800 text-white hover:bg-white hover:text-black">PHP</div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-slate-800 text-white hover:bg-white hover:text-black">MySQL</div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-slate-800 text-white hover:bg-white hover:text-black">Angular</div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-slate-800 text-white hover:bg-white hover:text-black"> MySQL / SQL Server </div>
+
+              <div className="rounded p-2 text-sm cursor-pointer bg-slate-800 text-white hover:bg-white hover:text-black">Git</div>
             
             </motion.div>
             {/* SKILLS SCROLL SVG */}
@@ -106,18 +116,44 @@ const AboutPage = () => {
             <motion.h1 initial={{x:"-300px"}} animate={ isExperienceRefInView ? {x:"0"}: {}} transition={{delay:0.2}} className="font-bold text-2xl">EXPERIENCE</motion.h1>
             {/* EXPERIENCE LIST */}
             <motion.div initial={{x:"-300px"}} animate={ isExperienceRefInView ? {x:"0"}: {}} transition={{delay:0.2}} className="">
+              {/* EXPERIENCE LIST ITEM 2*/}
+              <div className="flex justify-between h-48">
+                {/* LEFT */}
+                <div className="w-1/3 "></div>
+                {/* CENTER */}
+                <div className="w-1/6 flex justify-center">
+                  {/* LINE */}
+                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                    {/* LINE CIRCLE */}
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
+                  </div>
+                </div>
+                {/* RIGHT */}
+                <div className="w-1/3  ">
+                  {/* JOB TITLE */}
+                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Self Development</div>
+                  {/* JOB DESC */}
+                  <div className="p-3 text-sm italic">Built full-stack applications using React, Node.js, 
+Next.js and MongoDB — including a booking platform 
+and personal portfolio website.</div>
+                  {/* JOB DATE */}
+                  <div className="p-3 text-sm text-red-400 font-semibold">2025 - Present</div>
+                  {/* JOB COMPANY */}
+                  {/* <div className="p-1 rounded bg-white text-sm font-semibold w-fit"></div> */}
+                </div>
+              </div>
               {/* EXPERIENCE LIST ITEM 1*/}
               <div className="flex justify-between h-48">
                 {/* LEFT */}
                 <div className="w-1/3 ">
                   {/* JOB TITLE */}
-                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Development</div>
+                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Freelance Developer</div>
                   {/* JOB DESC */}
-                  <div className="p-3 text-sm italic">My current employment. way better than the position before!</div>
+                  <div className="p-3 text-sm italic">Developed and customized WordPress/PHP solutions for clients.</div>
                   {/* JOB DATE */}
-                  <div className="p-3 text-sm text-red-400 font-semibold">2019-2024</div>
+                  <div className="p-3 text-sm text-red-400 font-semibold">2025</div>
                   {/* JOB COMPANY */}
-                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">Softsq</div>
+                  {/* <div className="p-1 rounded bg-white text-sm font-semibold w-fit"></div> */}
                 </div>
                 {/* CENTER */}
                 <div className="w-1/6 flex justify-center">
@@ -145,9 +181,9 @@ const AboutPage = () => {
                 {/* RIGHT */}
                 <div className="w-1/3  ">
                   {/* JOB TITLE */}
-                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Development</div>
+                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Software Developer </div>
                   {/* JOB DESC */}
-                  <div className="p-3 text-sm italic">My current employment. way better than the position before!</div>
+                  <div className="p-3 text-sm italic">Built large-scale tour booking system, real estate platform and LMS customization using C#, Vue.js, PHP and WordPress under Agile/CI-CD workflow.</div>
                   {/* JOB DATE */}
                   <div className="p-3 text-sm text-red-400 font-semibold">2019-2024</div>
                   {/* JOB COMPANY */}
@@ -158,13 +194,14 @@ const AboutPage = () => {
                 {/* LEFT */}
                 <div className="w-1/3 ">
                   {/* JOB TITLE */}
-                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Development</div>
+                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Junior Programmer</div>
                   {/* JOB DESC */}
-                  <div className="p-3 text-sm italic">My current employment. way better than the position before!</div>
+                  <div className="p-3 text-sm italic">
+                  Developed desktop applications and database architecture using C#/.NET, WPF and SQL.</div>
                   {/* JOB DATE */}
-                  <div className="p-3 text-sm text-red-400 font-semibold">2019-2024</div>
+                  <div className="p-3 text-sm text-red-400 font-semibold">2018</div>
                   {/* JOB COMPANY */}
-                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">Softsq</div>
+                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">Quark System</div>
                 </div>
                 {/* CENTER */}
                 <div className="w-1/6 flex justify-center">

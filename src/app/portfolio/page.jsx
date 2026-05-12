@@ -7,17 +7,23 @@ const items = [
   {
     id: 1,
     color: "from-red-300 to-blue-300",
-    title: "React Commerce",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://fastly.picsum.photos/id/9/5000/3269.jpg?hmac=cZKbaLeduq7rNB8X-bigYO8bvPIWtT-mh8GRXtU3vPc",
+    title: "Tour Management System",
+    desc: `Large-scale back-office system for tour product 
+       management, booking and passenger data.
+       Built with C#, SQL Server and MongoDB 
+       under CI/CD pipeline with RabbitMQ and Octopus.`,
+    img: "/project_tpx.jpeg",
     link: "https://lama.dev",
   },
   {
     id: 2,
     color: "from-blue-300 to-violet-300",
-    title: "Next.js Medium Blog",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://fastly.picsum.photos/id/20/3670/2462.jpg?hmac=CmQ0ln-k5ZqkdtLvVO23LjVAEabZQx2wOaT4pyeG10I",
+    title: "Learning Management System",
+    desc: `Custom LMS features including career path system, 
+       government API integration (DPIS) 
+       and performance tracking reports.
+       Built with WordPress, PHP and AJAX.`,
+    img: "/project_hrdis.jpeg",
     link: "https://lama.dev",
   },
   {
@@ -25,7 +31,7 @@ const items = [
     color: "from-violet-300 to-purple-300",
     title: "Vanilla Book App",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://fastly.picsum.photos/id/24/4855/1803.jpg?hmac=ICVhP1pUXDLXaTkgwDJinSUS59UWalMxf4SOIWb9Ui4",
+    img: "/project_itim.png",
     link: "https://lama.dev",
   },
   {
