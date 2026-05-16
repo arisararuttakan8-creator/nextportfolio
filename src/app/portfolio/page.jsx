@@ -13,7 +13,7 @@ const items = [
        Built with C#, SQL Server and MongoDB 
        under CI/CD pipeline with RabbitMQ and Octopus.`,
     img: "/project_tpx.jpeg",
-    link: "https://lama.dev",
+    link: "https://a.tourprox.com/",
   },
   {
     id: 2,
@@ -24,15 +24,15 @@ const items = [
        and performance tracking reports.
        Built with WordPress, PHP and AJAX.`,
     img: "/project_hrdis.jpeg",
-    link: "https://lama.dev",
+    link: "https://hrdis.nrct.go.th/",
   },
   {
     id: 3,
     color: "from-violet-300 to-purple-300",
-    title: "Vanilla Book App",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    title: "Learning Management System",
+    desc: "Custom reports and other services ",
     img: "/project_itim.png",
-    link: "https://lama.dev",
+    link: "https://www.itimplus.com/",
   },
   {
     id: 4,
@@ -40,7 +40,7 @@ const items = [
     title: "Spotify Music App",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
     img: "https://fastly.picsum.photos/id/48/5000/3333.jpg?hmac=y3_1VDNbhii0vM_FN6wxMlvK27vFefflbUSH06z98so",
-    link: "https://lama.dev",
+    link: "#",
   },
 ];
 const PortfolioPage = () => {
@@ -63,7 +63,7 @@ const PortfolioPage = () => {
             {items.map(item=>(
               <div className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`} key={item.id}>
                 <div className="flex flex-col gap-8 text-white">
-                  <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-8xl">{item.title}</h1>
+                  <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-6xl 2xl:text-8xl">{item.title}</h1>
                   <div className="relative  w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]">
                     <Image src={item.img} alt="" fill></Image>
                   </div>
@@ -79,7 +79,7 @@ const PortfolioPage = () => {
         </div>
       </div>
       <div className="h-screen w-screen flex flex-col gap-16 justify-center items-center text-center">
-        <h1 className="text-8xl">Do you have a project?</h1>
+        <h1 className=" text-6xl 2xl:text-8xl">Do you have a project?</h1>
         <div className="relative">
         <motion.svg
           animate={{rotate:360}}
@@ -94,7 +94,7 @@ const PortfolioPage = () => {
               />
             </defs>
             <text fill="#000">
-              <textPath xlinkHref="#circlePath" className="text-xl ">Front-end Developer and UI Designer</textPath>
+              <textPath xlinkHref="#circlePath" className="text-xl ">Full-Stack Developer | React & Node.js</textPath>
             </text>
           </motion.svg>
           <Link href="/contact" className="w-16 h-16 md:w-28 md:h-28 absolute top-0 left-0 right-0 bottom-0 m-auto bg-black text-white rounded-full flex items-center justify-center">Hire Me</Link>
