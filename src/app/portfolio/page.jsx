@@ -5,6 +5,17 @@ import Image from "next/image";
 import Link from "next/link";
 const items = [
   {
+    id: 4,
+    color: "from-purple-300 to-red-300",
+    title: "AI Manual Assistant",
+    desc: `Full-stack app with AI-powered Q&A, 
+       user authentication and activity logging.
+       Built with React, Node.js, TypeScript, 
+       Prisma and PostgreSQL.`,
+    img: "/project_AI_Manual_Assistan.png",
+    link: "https://ask-manual.vercel.app/",
+  },
+  {
     id: 1,
     color: "from-red-300 to-blue-300",
     title: "Tour Management System",
@@ -34,14 +45,7 @@ const items = [
     img: "/project_itim.png",
     link: "https://www.itimplus.com/",
   },
-  {
-    id: 4,
-    color: "from-purple-300 to-red-300",
-    title: "Spotify Music App",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://fastly.picsum.photos/id/48/5000/3333.jpg?hmac=y3_1VDNbhii0vM_FN6wxMlvK27vFefflbUSH06z98so",
-    link: "#",
-  },
+  
 ];
 const PortfolioPage = () => {
 
@@ -61,18 +65,27 @@ const PortfolioPage = () => {
           <motion.div style={{x}} className="flex">
             <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300"/>
             {items.map(item=>(
-              <div className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`} key={item.id}>
-                <div className="flex flex-col gap-8 text-white">
+              <div className={`min-h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color} py-12`}>
+              <div className="flex flex-col gap-8 text-white">
                   <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-6xl 2xl:text-8xl">{item.title}</h1>
-                  <div className="relative  w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]">
-                    <Image src={item.img} alt="" fill></Image>
+                  <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]">
+                      <Image src={item.img} alt="" fill className="object-contain"/>
                   </div>
-                  <p className="w-80 md:w-96 lg:w-lg xl:w-[600xl]">{item.desc}</p>
-                  <Link href={item.link} className="flex justify-end">
-                    <button className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded ">See Demo</button>
+                  <p className="w-80 md:w-96 lg:w-[500px] xl:w-[600px] line-clamp-4">
+                      {item.desc}
+                  </p>
+                  <Link 
+                    href={item.link} 
+                    className="flex justify-end"
+                    target="_blank"        
+                    rel="noopener noreferrer"  
+                  >
+                      <button className="p-2 text-sm md:p-4 md:text-md lg:p-5 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
+                          See Demo
+                      </button>
                   </Link>
-                </div>
               </div>
+          </div>
             ))}
           </motion.div>
           
