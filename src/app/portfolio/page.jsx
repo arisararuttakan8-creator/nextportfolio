@@ -91,14 +91,14 @@ const PortfolioPage = () => {
           
         </div>
       </div>
-      <div className="h-screen w-screen flex flex-col gap-16 justify-center items-center text-center">
+      <div className="relative h-screen w-screen flex flex-col gap-16 justify-center items-center text-center">
         <h1 className=" text-6xl 2xl:text-8xl">Do you have a project?</h1>
         <div className="relative">
         <motion.svg
           animate={{rotate:360}}
           transition={{duration:8,ease:"linear",repeat:Infinity}}
             viewBox="0 0 300 300"
-            className="w-64 h-64 md:w-[500px] md:h-[500px]"
+            className="w-64 h-64 md:w-[350px] md:h-[350px] pointer-events-none"
           >
             <defs>
               <path
@@ -110,7 +110,7 @@ const PortfolioPage = () => {
               <textPath xlinkHref="#circlePath" className="text-xl ">Full-Stack Developer | React & Node.js</textPath>
             </text>
           </motion.svg>
-          <Link href="/contact" className="w-16 h-16 md:w-28 md:h-28 absolute top-0 left-0 right-0 bottom-0 m-auto bg-black text-white rounded-full flex items-center justify-center">Hire Me</Link>
+          <Link href="/contact" className="w-16 h-16 md:w-28 md:h-28 absolute top-0 left-0 right-0 bottom-0 m-auto bg-black text-white rounded-full flex items-center justify-center z-50">Hire Me</Link>
         </div>
       </div>
     </motion.div>
