@@ -15,6 +15,7 @@ export default function RootLayout({ children }) {
       
       <body className={inter.className}>
         <TransitionProvider>{children}</TransitionProvider> 
+        <GoogleAnalytics gaId="G-917YEDS64Y" />
       </body>
     </html>
   );
