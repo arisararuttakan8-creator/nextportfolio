@@ -6,16 +6,19 @@ import Link from "next/link";
 const items = [
   {
     id: 5,
+    languages : ['React', 'Node.js', 'Express', 'MongoDB'],
     color: "from-purple-300 to-red-300",
     title: "Full-Stack Hotel Booking App",
     desc: `Hotel booking platform with user authentication,
        hotel search, room availability and reservation management.
        Built with React, Node.js, Express, MongoDB and JWT.`,
     img: "/project_bookingapp.png",
+    linkCode : "https://github.com/arisararuttakan8-creator/bookingApp",
     link: "https://booking-app-gamma-pied.vercel.app/",
   },
   {
     id: 4,
+    languages : ['React', 'Node.js', 'TypeScript', 'PostgreSQL', 'Prisma','Google ai studio'],
     color: "from-purple-300 to-red-300",
     title: "AI Manual Assistant",
     desc: `Full-stack app with AI-powered Q&A, 
@@ -23,10 +26,12 @@ const items = [
        Built with React, Node.js, TypeScript, 
        Prisma and PostgreSQL.`,
     img: "/project_AI_Manual_Assistan.png",
+    linkCode: "https://github.com/arisararuttakan8-creator/ask-manual",
     link: "https://ask-manual.vercel.app/",
   },
   {
     id: 1,
+    languages : ['C#', 'SQL Serve', 'MongoDB'],
     color: "from-red-300 to-blue-300",
     title: "Tour Management System",
     desc: `Large-scale back-office system for tour product 
@@ -38,6 +43,7 @@ const items = [
   },
   {
     id: 2,
+    languages : ['PHP', 'WORDPRESS', 'JS'],
     color: "from-blue-300 to-violet-300",
     title: "Learning Management System",
     desc: `Custom LMS features including career path system, 
@@ -49,6 +55,7 @@ const items = [
   },
   {
     id: 3,
+    languages : ['PHP', 'WORDPRESS', 'JS'],
     color: "from-violet-300 to-purple-300",
     title: "Learning Management System",
     desc: "Custom reports and other services ",
@@ -76,24 +83,45 @@ const PortfolioPage = () => {
             <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300"/>
             {items.map(item=>(
               <div key={item.id} className={`min-h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color} py-12`}>
-              <div className="flex flex-col gap-8 text-white">
+              
+              <div className="flex flex-col gap-6 text-white">
+                  
                   <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-6xl 2xl:text-8xl">{item.title}</h1>
                   <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]">
                       <Image src={item.img} alt="" fill className="object-contain"/>
                   </div>
+                 
+                  <div className="flex-row">
+                    {item.languages && item.languages.map((language,i)=>(
+                      <span key={i} class="mr-1 px-3 py-1 text-xs font-semibold rounded-full border bg-blue-50 text-blue-600 border-blue-200 w-px">{language}</span>
+                    ))}
+                  </div>
                   <p className="w-80 md:w-96 lg:w-[500px] xl:w-[600px] line-clamp-4">
                       {item.desc}
                   </p>
-                  <Link 
-                    href={item.link} 
-                    className="flex justify-end"
-                    target="_blank"        
-                    rel="noopener noreferrer"  
-                  >
-                      <button className="p-2 text-sm md:p-4 md:text-md lg:p-5 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
-                          See Demo
-                      </button>
-                  </Link>
+                  <div className="flex flex-columns justify-end">
+                  {item.linkCode &&  
+                    <Link 
+                      href={item.linkCode} 
+                      className="flex justify-end"
+                      target="_blank"        
+                      rel="noopener noreferrer"  
+                    >
+                        <button className="p-2 text-sm md:p-4 md:text-md lg:p-5 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
+                            Code
+                        </button>
+                    </Link>}
+                    <Link 
+                      href={item.link} 
+                      className="flex justify-end"
+                      target="_blank"        
+                      rel="noopener noreferrer"  
+                    >
+                        <button className="p-2 text-sm md:p-4 md:text-md lg:p-5 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
+                            See Demo
+                        </button>
+                    </Link>
+                  </div>
               </div>
           </div>
             ))}
