@@ -5,6 +5,16 @@ import Image from "next/image";
 import Link from "next/link";
 const items = [
   {
+    id: 5,
+    color: "from-purple-300 to-red-300",
+    title: "Full-Stack Hotel Booking App",
+    desc: `Hotel booking platform with user authentication,
+       hotel search, room availability and reservation management.
+       Built with React, Node.js, Express, MongoDB and JWT.`,
+    img: "/project_bookingapp.png",
+    link: "https://booking-app-gamma-pied.vercel.app/",
+  },
+  {
     id: 4,
     color: "from-purple-300 to-red-300",
     title: "AI Manual Assistant",
@@ -65,7 +75,7 @@ const PortfolioPage = () => {
           <motion.div style={{x}} className="flex">
             <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300"/>
             {items.map(item=>(
-              <div className={`min-h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color} py-12`}>
+              <div key={item.id} className={`min-h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color} py-12`}>
               <div className="flex flex-col gap-8 text-white">
                   <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-6xl 2xl:text-8xl">{item.title}</h1>
                   <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]">
